@@ -24,21 +24,18 @@ body {
     width: auto;
   }
 
-  // footer{
-  //   margin-bottom: 15px;
-  //   bottom: 0px;
-  //   width: 100%;
-  //   position: absolute;
-  //   text-align: center;
-  // }
+  footer{
+    margin-bottom: 15px;
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+  }
   #page-content-wrapper{
     flex: 0 0 auto;
     flex-direction: row;
     height: 100%;
     min-height: 100vh;
-    span.com_site{
-      font-size: 8pt;
-      color: #828282;
-    }
+   
   }
 }
