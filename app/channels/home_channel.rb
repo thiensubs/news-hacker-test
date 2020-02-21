@@ -1,7 +1,11 @@
 class HomeChannel < ApplicationCable::Channel
   def subscribed
     # stream_from "some_channel"
-    stream_from "content_news_#{params[:job_id]}"
+    if params[:job_id].present?
+      stream_from "content_news_#{params[:job_id]}" 
+    else
+      reject
+    end
   end
 
   def unsubscribed
