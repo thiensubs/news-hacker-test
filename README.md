@@ -4,21 +4,29 @@ This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
+* Rails 6
 
-* Ruby version
+* Ruby version: 2.7.0
 
-* System dependencies
+* System dependencies: ```bundle -j 4```
 
 * Configuration
 
-* Database creation
+* How to run the test suite 
 
-* Database initialization
+    
+  1. ```bundle exec rspec spec/ ```
 
-* How to run the test suite
+  2. ```bundle exec rspec spec/controllers```
 
-* Services (job queues, cache servers, search engines, etc.)
+  3. ```actioncable, activejob ...```
+   
+(Development options)
+* Run Rails application: 
+  ```rails s```
 
-* Deployment instructions
+* Run Puma for ActionCable: 
+  ```bundle exec puma -p 28080 cable/config.ru```
 
-* ...
+* Run webpack:
+  ```./bin/webpack-dev-server```
