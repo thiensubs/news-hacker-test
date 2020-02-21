@@ -6,6 +6,7 @@ $(document).on('turbolinks:load',function(){
         $('.wrap').show();
         // Called when the subscription is ready for use on the server
         console.log('connected~~');
+
       },
 
       disconnected() {
@@ -20,7 +21,9 @@ $(document).on('turbolinks:load',function(){
           else
             $('#contents_news').html(data.data);
           $('.wrap').hide();
+          $('#button_load_more').show();
           $('#button_load_more').prop("disabled",false);
+
         }
         // Called when there's incoming data on the websocket for this channel
       },
