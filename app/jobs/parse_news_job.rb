@@ -20,12 +20,10 @@ class ParseNewsJob < ApplicationJob
     athing_list.each_with_index do |athing, index|
       sitestr = athing.search('.sitestr').text.squish
       title = athing.search('.storylink').text.squish 
-      hash_temp = { id: athing[:id], title: title, info: info_list[index].text.squish, site: sitestr }
+      link = athing.search('.storylink').attr('href') rescue ' '
+      hash_temp = { id: athing[:id], title: title, info: info_list[index].text.squish, site: sitestr, link:  link}
       news = OpenStruct.new(hash_temp)
       news_list << news
-    end
-    Rails.cache.fetch('data_list') do 
-      news_list
     end
     @data = ApplicationController.render(partial: 'partials/new', :collection => news_list, cached: true)
     if args.size ==0
