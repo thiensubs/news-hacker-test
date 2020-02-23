@@ -27,7 +27,7 @@ class ParseNewsJob < ApplicationJob
       ## make data for cache and render html to broadcast.
       athing_list.each_with_index do |athing, index|
         sitestr = athing.search('.sitestr').text.squish
-        title = athing.search('.storylink').text.squish 
+        title = athing.search('.rank').text.squish + athing.search('.storylink').text.squish 
         link = athing.search('.storylink').attr('href').value rescue ' '
         hash_temp = { id: athing[:id], title: title, info: info_list[index].text.squish, site: sitestr, link:  link}
         news = OpenStruct.new(hash_temp)
@@ -49,7 +49,7 @@ class ParseNewsJob < ApplicationJob
     end
     #Parse readability for each items in news.
     news_list.each do |e|
-      ParseReadabilityJob.perform_later(e.id, e.link, self.job_id)
+      ParseReadabilityJob.perform_later(e.id, e.link, job_id)
     end
   end
 end

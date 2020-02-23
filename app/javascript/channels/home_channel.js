@@ -19,7 +19,6 @@ $(document).on('turbolinks:load',function(){
           {
             $('#contents_news').append(data.data);
             $('#button_load_more').data("page", data.page);
-            console.log(data)
             if (typeof data.id !== 'undefined'){
               $('#modal-body-'+data.id).html(data.data.table.content);
               if (data.data.table.image_meta === null)
