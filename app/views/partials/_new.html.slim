@@ -1,5 +1,5 @@
 .card
-  img.card-img-top[data-src=new.link alt="Card image cap" id=new.id]
+  img.card-img-top[data-src=new.link alt="Card image cap" id=new.id onerror="this.onerror=null;this.src='https://loremflickr.com/320/240?lock=1';"]
   .card-body
     blockquote.blockquote.mb-0.card-body
       p=new.title
@@ -9,3 +9,17 @@
             = new.site
     p.card-text
       small.text-muted=new.info
+.modal.fade[tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" id="modal-#{new.id}"]
+  .modal-dialog.modal-dialog-centered.modal-lg[role="document"]
+    .modal-content
+      .modal-header
+        h5#exampleModalLongTitle.modal-title
+          =new.title
+        button.close[type="button" data-dismiss="modal" aria-label="Close"]
+          span[aria-hidden="true"]
+            | ×
+      .modal-body[id="modal-body-#{new.id}"]
+    
+      .modal-footer
+        button.btn.btn-secondary[type="button" data-dismiss="modal"]
+          | Close

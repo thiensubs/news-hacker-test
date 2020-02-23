@@ -50,6 +50,10 @@ $(document).on('turbolinks:load', function() {
       }
     });
   });
+  $(document).on("click", ".card", function(){
+    var id_modal = $(this).find('img').attr('id');
+    $('#modal-'+id_modal).modal('show');
+  });
 });
 
 $( document ).ready(function() {
