@@ -40,5 +40,11 @@ body {
       font-size: 8pt;
       color: #828282;
     }
+    .card{
+      transition: box-shadow .3s;
+    }
+    .card:hover {
+      box-shadow: 0 0 13px rgba(33,33,33,.2); 
+    }
   }
 }
