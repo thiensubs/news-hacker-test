@@ -10,7 +10,9 @@ Things you may want to cover:
 
 * System dependencies: ```bundle -j 4```
 
-* Configuration
+* Configuration:
+  
+    Please make sure you are install redis and run it first at all - I used it for caching data.
 
 * How to run the test suite 
 
