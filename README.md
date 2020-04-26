@@ -6,7 +6,7 @@ application up and running.
 Things you may want to cover:
 * Rails 6
 
-* Ruby version: 2.7.0
+* Ruby version: 2.7.1
 
 * System dependencies: ```bundle -j 4```
 
