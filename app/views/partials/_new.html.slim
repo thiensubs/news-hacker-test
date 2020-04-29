@@ -18,8 +18,8 @@
         button.close[type="button" data-dismiss="modal" aria-label="Close"]
           span[aria-hidden="true"]
             | ×
-      .modal-body[id="modal-body-#{new.id}"]
-    
+      .modal-body[id="modal-body-#{new.id}" class="trix-content"]
+        trix-editor[id="x-#{new.id}"]
       .modal-footer
         button.btn.btn-secondary[type="button" data-dismiss="modal"]
           | Close

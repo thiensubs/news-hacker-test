@@ -20,7 +20,8 @@ $(document).on('turbolinks:load',function(){
             $('#contents_news').append(data.data);
             $('#button_load_more').data("page", data.page);
             if (typeof data.id !== 'undefined'){
-              $('#modal-body-'+data.id).html(data.data.table.content);
+              var element = $('#x-'+data.id)[0]
+              $('#x-'+data.id).val(data.data.table.content);
               if (data.data.table.image_meta === null)
               {
                 $('#'+data.id).attr("src", "https://loremflickr.com/320/240?lock=1");

@@ -9,11 +9,13 @@ require("channels")
 require('jquery/dist/jquery')
 require('bootstrap/dist/js/bootstrap')
 require('packs/pace')
+require('trix/dist/trix')
 import "src/home.scss";
 import "src/pace.scss";
 import "src/water.sass";
 import $ from 'jquery';
 import "bootstrap/dist/css/bootstrap.css";
+import "trix/dist/trix.css"
 
 Pace.paceOptions = {
   // Disable the 'elements' source
